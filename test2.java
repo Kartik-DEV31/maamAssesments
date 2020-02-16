@@ -1,11 +1,10 @@
-
 import java.util.HashMap;
 
 import java.util.Scanner;
 
 
 
-public class test2 {
+public class collection6 {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
@@ -43,23 +42,31 @@ public class test2 {
 		
 		if (count ==1)
 		{
-			int k = 0;
-			while(k==0) {
-			System.out.println("Enter the name to search : ");
-		String nameSearch = str.nextLine();
+			System.out.println("How many names you want to search :-  ");
+			int nameN = num.nextInt();
+			String nameSearch =new String();
 		
-		if(data.containsKey(nameSearch))
-		{
-		System.out.println("Required Data =  "+data.get(nameSearch));
-		}
-		else System.out.println("Entry not Exist");
-		System.out.println("to exit enter any digit other than 0 : " );	
-		 k = num.nextInt();
+			String search_Results[] = new String[nameN];
+			for(int i =0;i<nameN;i++) {
+			System.out.println("Enter the name to search : ");
+		 nameSearch = str.nextLine();
+		search_Results[i] = nameSearch;
+		
+		
+		
+			}
+			
+			for(int i =0;i<nameN;i++) {
+			if(data.containsKey(search_Results[i]))
+			{
+			System.out.println("Required Data =  "+data.get(search_Results[i]));
+			}
+			else System.out.println("Entry not Exist");
+		
 		}
 		
 		}
 		
 
 	}
-
 }
